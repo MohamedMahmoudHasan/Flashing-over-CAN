@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"new_tx\startup_stm32f103xb.o"
+"new_tx\flash.o"
+"new_tx\main.o"
+"new_tx\stm32f1xx_it.o"
+"new_tx\stm32f1xx_hal_msp.o"
+"new_tx\boot_mngr.o"
+"new_tx\bootloader.o"
+"new_tx\stm32f1xx_hal_gpio_ex.o"
+"new_tx\stm32f1xx_hal_can.o"
+"new_tx\stm32f1xx_hal.o"
+"new_tx\stm32f1xx_hal_rcc.o"
+"new_tx\stm32f1xx_hal_rcc_ex.o"
+"new_tx\stm32f1xx_hal_gpio.o"
+"new_tx\stm32f1xx_hal_dma.o"
+"new_tx\stm32f1xx_hal_cortex.o"
+"new_tx\stm32f1xx_hal_pwr.o"
+"new_tx\stm32f1xx_hal_flash.o"
+"new_tx\stm32f1xx_hal_flash_ex.o"
+"new_tx\stm32f1xx_hal_exti.o"
+"new_tx\stm32f1xx_hal_tim.o"
+"new_tx\stm32f1xx_hal_tim_ex.o"
+"new_tx\stm32f1xx_hal_uart.o"
+"new_tx\system_stm32f1xx.o"
+--strict --scatter "new_tx\new_tx.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "new_tx.map" -o new_tx\new_tx.axf
